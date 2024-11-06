@@ -19,3 +19,7 @@ lerna-debug.log*
 *.sln
 *.sw?
 node_modules/
+# Build and output folders
+dist/
+build/
+.vite/
