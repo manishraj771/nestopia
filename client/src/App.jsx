@@ -171,7 +171,6 @@ import Agents from "./routes/agents/Agents";
 import ForgotPassword from "./routes/forgotPassword/ForgotPassword";
 import ResetPassword from "./routes/resetPaasword/ResetPassword";
 import { Layout, RequireAuth } from "./routes/layout/layout";
-import NotFound from "./routes/notFound/NotFound";
 
 function App() {
   return (
@@ -191,7 +190,8 @@ function App() {
           <Route path="/profile" element={<RequireAuth><ProfilePage /></RequireAuth>} />
           <Route path="/profile/update" element={<RequireAuth><ProfileUpdatePage /></RequireAuth>} />
           <Route path="/add" element={<RequireAuth><NewPostPage /></RequireAuth>} />
-          <Route path="*" element={<NotFound />} />
+          {/* 404 Not Found Route */}
+          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
       </Layout>
     </BrowserRouter>
