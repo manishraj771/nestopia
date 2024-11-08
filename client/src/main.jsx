@@ -31,7 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthContextProvider>
       <SocketContextProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <App />
         </BrowserRouter>
       </SocketContextProvider>
