@@ -25,6 +25,8 @@ import { AuthContextProvider } from "./context/AuthContext.jsx";
 import { SocketContextProvider } from "./context/SocketContext.jsx";
 import { BrowserRouter } from "react-router-dom";
 
+console.log("API URL:", process.env.REACT_APP_API_URL);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthContextProvider>
@@ -36,4 +38,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </AuthContextProvider>
   </React.StrictMode>
 );
+
 

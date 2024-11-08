@@ -94,7 +94,7 @@
 // client/src/App.jsx
 
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import HomePage from "./routes/homePage/homePage";
 import ListPage from "./routes/listPage/listPage";
 import SinglePage from "./routes/singlePage/singlePage";
@@ -111,7 +111,6 @@ import ResetPassword from "./routes/resetPaasword/ResetPassword";
 import { Layout, RequireAuth } from "./routes/layout/layout";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 
-// New NotFound component
 const NotFound = () => <h1>404 - Page Not Found</h1>;
 
 function App() {
@@ -130,7 +129,7 @@ function App() {
         { path: "/agents", element: <Agents /> },
         { path: "/forgot-password", element: <ForgotPassword /> },
         { path: "/reset-password", element: <ResetPassword /> },
-        { path: "*", element: <NotFound /> }, // Catch-all route for 404 errors
+        { path: "*", element: <NotFound /> },
       ],
     },
     {
@@ -148,4 +147,3 @@ function App() {
 }
 
 export default App;
-
